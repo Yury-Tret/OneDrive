@@ -3,6 +3,7 @@
 #include "core.h"
 #include "files.h"
 #include "parsers.h"
+#include <pthread.h>
 
 int main(int argc, char **argv)
 {
@@ -36,8 +37,8 @@ printf("refresh_access_token_uri - %s\n", config_params->refresh_access_token_ur
 	
 	return 0;
 }
-/*
-#include <pthread.h>
+
+
 void* threadFunc(void* argc)
 {
    
@@ -51,4 +52,3 @@ int connect_to_cloud()
     pthread_join(pth, NULL);
     return 0;
 }
-*/
